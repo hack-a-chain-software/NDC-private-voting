@@ -11,25 +11,25 @@ It is divided in the following sections:
 
 ## Requirements
 
-NDC is spearheading efforts to decentralize governance in the Near ecosystem. The first electoral process was carried out in 2023 and elected the first term of representatives. In this process a lot was learnt and the election faced some interesting problems:
+NDC is spearheading efforts to decentralize governance in the Near ecosystem. The first electoral process was carried out in 2023 and elected the first term of representatives. In this process, a lot was learned and the election faced some interesting problems:
 
-- Lack of privacy -> everyone could see who other people were voting for, which could cause retaliation amongst communities and candidates
-- Partial results -> as the election was fully public, voters could see the current tally of each candidate, which alters their perception about who is going to win and might make them change votes
-- Bribing -> voters could be payed or rewarded in different ways by showing that they voted for a specific candidate
+- Lack of privacy -> Everyone could see who other people were voting for, which could cause retaliation amongst communities and candidates
+- Partial results -> As the election was fully public, voters could see the current tally of each candidate, which alters their perception about who is going to win and might make them change votes
+- Bribing -> Voters could be paid or rewarded in different ways by showing that they voted for a specific candidate
 
-Developing a new voting framework that ameliorates those issues is going to significantly contribute to the decentralization, legitimacy and fairness of the next elections. 
+Developing a new voting framework that addresses these specific issues will significantly contribute to the next elections' decentralization, legitimacy, and fairness. 
 
-The solution for those problems is a voting system with the following features:
+The solution to those problems is a voting system with the following features:
 1. Anonymous voting -> Users can vote by proving their correct registration, but without revealing their identity in the vote transaction
-2. Anonymous ballot -> Vote transactions do NOT reveal the content of the vote. They are encrypted on chain and only revealed at the end of the vote
-3. Receipt obfuscation -> A user can verify that their vote was correctly counted in an election, but they cannot prove to other people who they voted for - this prevents bribing, vote buying and other collusion techniques
+2. Anonymous ballot -> Vote transactions do NOT reveal the content of the vote. They are encrypted on-chain and only revealed at the end of the vote
+3. Receipt obfuscation -> A user can verify that their vote was correctly counted in an election, but they cannot prove to other people who they voted for - this prevents bribing, vote buying, and other collusion techniques
 
 ## Components
 
-Privacy preserving elections are structured in 3 different sequential steps: (i) registration, (ii) vote casting and (iii) tallying. This is how national elections and other high profile voting processes are implemented around the world.
+Privacy-preserving elections are structured in 3 different sequential steps: (i) registration, (ii) vote casting and (iii) tallying. This is how national elections and other high-profile voting processes are implemented worldwide.
 - In **registration** phase, eligible voters must perform some sort of registration procedure. Upon performing this procedure they are enlisted in the list of voters;
-- In **vote casting** phase, only people that have registered can participate. Voters go to a voting poll, present some proof of their registration and cast a closed ballot that does not contain the identity of the voter and is kept secret until the end of the vote casting phase; 
-- In **tallying** phase, the ballots are opened, the votes are counted and the result is announced.
+- In **vote casting** phase, only people who have registered can participate. Voters go to a voting poll, present some proof of their registration, and cast a closed ballot that does not contain the identity of the voter and is kept secret until the end of the vote-casting phase; 
+- In **tallying** phase, the ballots are opened, the votes are counted, and the result is announced.
 
 ![Real life voting process diagram](./assets/process-real-life.png)
 
